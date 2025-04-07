@@ -1,0 +1,263 @@
+*{
+    margin:0;
+    padding: 0;
+    
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('depositphotos_55756093-stock-photo-spooky-looking-tree-with-twisted.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+input{
+    display: none;
+}
+.card{
+    position: relative;
+    width: 400px;
+    height: 250px;
+    border:1px red solid;
+    border-radius:12px;
+    display:flex;
+    justify-content: space-between;
+    background-color: #f8f8f8;
+    background-image: url('RMIT_University_Logo.svg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.rectangle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    background-color: #232323;
+    clip-path: polygon(0 0, 80% 0%, 100% 100%, 0% 100%);
+    transition: width 1s ease-in-out;
+
+}
+i{
+    font-size: 40px;
+    border-radius: 60%;
+    padding: 15px;
+    border: 1px solid red;
+    background-color: #f99c1b;
+    color:aliceblue;
+    z-index: 3;
+    
+}
+.myLogo{
+    width:120px;
+    height:120px;
+    border-radius: 60%;
+    border:1px red solid;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* email logo */
+#email ~ .card .rectangle::after{
+    content: '';
+    position:absolute;
+    height:100%;
+    top:0;
+    left:0;
+    width:0;
+    background-color: rgba(249, 156, 27, 0.5);
+    transition: width 0.8s ease-in-out;
+    width: 0;
+
+}
+#email:checked ~ .card .rectangle::after{
+    content: "s3932175@rmit.edu.vn";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+.mail{
+    
+    transition: left 1s ease-in-out;
+    z-index:2;
+}
+
+#email:checked ~ .card .mail{
+    top:10px;
+    left:10px;
+    z-index:2;
+    position: absolute;
+}
+#email:checked ~ .card .logo{
+    display:none;
+}
+#email:checked ~ .card .rectangle{
+    width: 100%;
+    clip-path: none;
+    background-color: none;
+}
+#email:checked ~ .card .number{
+    display: none;
+}
+#email:checked ~ .card .location{
+    display:none;
+}
+#email:checked ~ .card, #email:checked ~ .card .rectangle{
+    background-image: none;
+    background-color: rgba(249, 156, 27, 0.5);
+    
+}
+
+/* myLogo  */
+#myLog:checked ~ .card .rectangle {
+    width: 0;
+}
+
+
+/* phone logo */
+#phone ~ .card .rectangle::after{
+    content: '';
+    position:absolute;
+    height:100%;
+    top:0;
+    left:0;
+    width:0;
+    background-color: rgba(249, 156, 27, 0.5);
+    transition: width 0.8s ease-in-out;
+    width: 0;
+
+}
+#phone:checked ~ .card .rectangle::after{
+    content: "s3932175@rmit.edu.vn";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.number{
+    transition: top 1s ease-in-out;
+    z-index:2;
+}
+#phone:checked ~ .card .number{
+    top:10px;
+    left:10px;
+    z-index:2;
+    position: absolute;
+}
+#phone:checked ~ .card .logo{
+    display:none;
+}
+#phone:checked ~ .card .mail{
+    display: none;
+}
+#phone:checked ~ .card .location{
+    display: none;
+}
+
+#phone:checked ~ .card .rectangle{
+    width: 100%;
+    clip-path: none;
+    background-color: none;
+}
+#phone:checked ~ .card, #phone:checked ~ .card .rectangle{
+    background-image: none;
+    background-color: rgba(249, 156, 27, 0.5);
+    
+}
+
+/* address logo */
+#address ~ .card .rectangle::after{
+    content: '';
+    position:absolute;
+    height:100%;
+    top:0;
+    left:0;
+    width:0;
+    background-color: rgba(249, 156, 27, 0.5);
+    transition: width 0.8s ease-in-out;
+    width: 0;
+
+}
+#address:checked ~ .card .rectangle::after{
+    content: "s3932175@rmit.edu.vn";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.location{
+    transition: top 1s ease-in-out;
+    z-index:2;
+}
+#address:checked ~ .card .location{
+    top:10px;
+    left:10px;
+    z-index:2;
+    position: absolute;
+}
+#address:checked ~ .card .logo{
+    display:none;
+}
+#address:checked ~ .card .mail{
+    display: none;
+}
+#address:checked ~ .card .number{
+    display: none;
+}
+
+#address:checked ~ .card .rectangle{
+    width: 100%;
+    clip-path: none;
+    background-color: none;
+}
+#address:checked ~ .card, #address:checked ~ .card .rectangle{
+    background-image: none;
+    background-color: rgba(249, 156, 27, 0.5);
+    
+}
+
+img:hover{
+    transform: scale(1.5);
+}
+
+
+i:hover{
+    transform: scale(1.5);
+    
+}
+
+/* a:hover{
+    background-color: #232323;
+    z-index: 5;
+} */
+
+/* #email:checked ~ .card{
+    background-color: orange;
+    
+}
+#email:checked ~ .card::before{
+    content: '';
+    background-color: orange;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 15s ease-in-out;
+    
+} */
