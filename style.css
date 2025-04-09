@@ -138,7 +138,7 @@ i{
 
 }
 #phone:checked ~ .card .rectangle::after{
-    content: "s3932175@rmit.edu.vn";
+    content: "0123546877";
     display: flex;
     justify-content: center;
     align-items: center;
@@ -191,7 +191,7 @@ i{
 
 }
 #address:checked ~ .card .rectangle::after{
-    content: "s3932175@rmit.edu.vn";
+    content: "702 Đ. Nguyễn Văn Linh, Tân Hưng, Quận 7, Hồ Chí Minh";
     display: flex;
     justify-content: center;
     align-items: center;
